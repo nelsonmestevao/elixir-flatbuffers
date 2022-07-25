@@ -5,7 +5,7 @@ defmodule FlatbufferPort.Mixfile do
     [
       app: :flatbuffer_port,
       version: "0.0.1",
-      elixir: "~> 1.0",
+      elixir: "~> 1.13",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       compilers: Mix.compilers() ++ [:port],
@@ -19,7 +19,7 @@ defmodule FlatbufferPort.Mixfile do
 
   defp deps do
     [
-      {:flatbuffers, [github: "google/flatbuffers", tag: "v1.12.0", compile: false, app: false]},
+      {:flatbuffers, [github: "google/flatbuffers", tag: "v2.0.0", compile: false, app: false]},
       {:jason, "~> 1.1.2", [only: :test]}
     ]
   end
